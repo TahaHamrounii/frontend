@@ -1,41 +1,62 @@
 {
-  "hash": "646eedf7",
-  "browserHash": "fc77b0bd",
+  "hash": "ae0c0ce0",
+  "browserHash": "b3b3b8fa",
   "optimized": {
     "@angular/common": {
       "src": "../../../../../node_modules/@angular/common/fesm2022/common.mjs",
       "file": "@angular_common.js",
-      "fileHash": "86140666",
+      "fileHash": "6958ece3",
       "needsInterop": false
     },
     "@angular/core": {
       "src": "../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "2296f2c8",
+      "fileHash": "df46df38",
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
-      "fileHash": "26f18acb",
+      "fileHash": "57784e8b",
       "needsInterop": false
     },
     "@angular/router": {
       "src": "../../../../../node_modules/@angular/router/fesm2022/router.mjs",
       "file": "@angular_router.js",
-      "fileHash": "e1d8f700",
+      "fileHash": "a694091f",
+      "needsInterop": false
+    },
+    "jspdf": {
+      "src": "../../../../../node_modules/jspdf/dist/jspdf.es.min.js",
+      "file": "jspdf.js",
+      "fileHash": "286369cb",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-EJZUQ4WJ": {
-      "file": "chunk-EJZUQ4WJ.js"
+    "chunk-S6TKMJEM": {
+      "file": "chunk-S6TKMJEM.js"
     },
-    "chunk-2LUOTJJP": {
-      "file": "chunk-2LUOTJJP.js"
+    "chunk-GJZ4H2QL": {
+      "file": "chunk-GJZ4H2QL.js"
     },
-    "chunk-KOXGXC6M": {
-      "file": "chunk-KOXGXC6M.js"
+    "chunk-5XJVDFIL": {
+      "file": "chunk-5XJVDFIL.js"
+    },
+    "html2canvas.esm-M7GPBYJX": {
+      "file": "html2canvas__esm-M7GPBYJX.js"
+    },
+    "purify.es-COZS3BKZ": {
+      "file": "purify__es-COZS3BKZ.js"
+    },
+    "index.es-F32KSGI6": {
+      "file": "index__es-F32KSGI6.js"
+    },
+    "chunk-UMXKHIZH": {
+      "file": "chunk-UMXKHIZH.js"
+    },
+    "chunk-STUZPFMT": {
+      "file": "chunk-STUZPFMT.js"
     }
   }
 }

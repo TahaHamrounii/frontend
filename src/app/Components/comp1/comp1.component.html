@@ -1,4 +1,24 @@
-
-    <div *ngFor=" let element of table">
-        {{element.name}}
-    </div>
+<!-- app-comp1.component.html -->
+<table>
+    <thead>
+      <tr>
+        <td>id</td>
+        <td>name</td>
+        <td>budget</td>
+        <td>category</td>
+        <td>date</td>
+        <td>Actions</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let element of table">
+        <td>{{ element.id }}</td>
+        <td>{{ element.name }}</td>
+        <td>{{ element.budget }}</td>
+        <td>{{ element.category }}</td>
+        <td>{{ element.date }}</td>
+        <td><button (click)="DownloadPDF(element.id)">Report</button></td>
+      </tr>
+    </tbody>
+  </table>
+  
