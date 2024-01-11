@@ -1,44 +1,59 @@
 {
-  "hash": "ae0c0ce0",
-  "browserHash": "b3b3b8fa",
+  "hash": "983e81ce",
+  "browserHash": "de64cd17",
   "optimized": {
     "@angular/common": {
       "src": "../../../../../node_modules/@angular/common/fesm2022/common.mjs",
       "file": "@angular_common.js",
-      "fileHash": "6958ece3",
+      "fileHash": "e372e90d",
       "needsInterop": false
     },
     "@angular/core": {
       "src": "../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "df46df38",
+      "fileHash": "bf4dd70f",
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
-      "fileHash": "57784e8b",
+      "fileHash": "5ee85448",
       "needsInterop": false
     },
     "@angular/router": {
       "src": "../../../../../node_modules/@angular/router/fesm2022/router.mjs",
       "file": "@angular_router.js",
-      "fileHash": "a694091f",
+      "fileHash": "2c971cb3",
       "needsInterop": false
     },
     "jspdf": {
       "src": "../../../../../node_modules/jspdf/dist/jspdf.es.min.js",
       "file": "jspdf.js",
-      "fileHash": "286369cb",
+      "fileHash": "1d3bd8af",
+      "needsInterop": false
+    },
+    "@angular/common/http": {
+      "src": "../../../../../node_modules/@angular/common/fesm2022/http.mjs",
+      "file": "@angular_common_http.js",
+      "fileHash": "3efa8257",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-S6TKMJEM": {
-      "file": "chunk-S6TKMJEM.js"
+    "index.es-F32KSGI6": {
+      "file": "index__es-F32KSGI6.js"
+    },
+    "chunk-YNQALJHR": {
+      "file": "chunk-YNQALJHR.js"
+    },
+    "chunk-DQT2PBBR": {
+      "file": "chunk-DQT2PBBR.js"
     },
     "chunk-GJZ4H2QL": {
       "file": "chunk-GJZ4H2QL.js"
+    },
+    "chunk-UMXKHIZH": {
+      "file": "chunk-UMXKHIZH.js"
     },
     "chunk-5XJVDFIL": {
       "file": "chunk-5XJVDFIL.js"
@@ -48,12 +63,6 @@
     },
     "purify.es-COZS3BKZ": {
       "file": "purify__es-COZS3BKZ.js"
-    },
-    "index.es-F32KSGI6": {
-      "file": "index__es-F32KSGI6.js"
-    },
-    "chunk-UMXKHIZH": {
-      "file": "chunk-UMXKHIZH.js"
     },
     "chunk-STUZPFMT": {
       "file": "chunk-STUZPFMT.js"

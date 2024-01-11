@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
+
+
 import jsPDF from 'jspdf';
 
 @Component({
@@ -11,7 +14,24 @@ import jsPDF from 'jspdf';
 })
 
 export class Comp1Component {
-  table = [{id:'1',name:'name1',budget: 111.11,category:'category1',date:'2011-11-11'}, {id:'2',name:'name2',budget: 222.22,category:'category2',date:'2022-02-2'}];
+  table: any[] = [];
+  constructor(private http: HttpClient) {}
+
+
+  ngOnInit() {
+    this.getData()
+  }
+
+  getData() {
+    this.http.get<any[]>('http://127.0.0.1:8000/project').subscribe(
+      (response) => {
+        this.table = response;
+      },
+      (error) => {
+        console.error('Error fetching data:', error);
+      }
+    );
+  }
 
   DownloadPDF(x: string) {
       const ele = this.table.find((element) => element.id === x);
@@ -23,7 +43,7 @@ export class Comp1Component {
         const lineBrokeText = pdf.splitTextToSize(ch, maxWidth);
         
         pdf.text(lineBrokeText, 10, 10);
-        pdf.save('Project_report');
+        pdf.save('Generate_project'+ele.id+'_report');
       }
   }
 }
