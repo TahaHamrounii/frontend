@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Comp2Component } from './comp2.component';
+import { RepboxComponent } from './repbox.component';
 
-describe('Comp2Component', () => {
-  let component: Comp2Component;
-  let fixture: ComponentFixture<Comp2Component>;
+describe('RepboxComponent', () => {
+  let component: RepboxComponent;
+  let fixture: ComponentFixture<RepboxComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Comp2Component]
+      imports: [RepboxComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(Comp2Component);
+    fixture = TestBed.createComponent(RepboxComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

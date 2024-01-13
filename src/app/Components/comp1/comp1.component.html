@@ -1,23 +1,51 @@
-<table>
+<button (click)="togglePopup('table1')" class="long-button">Show Products</button>
+
+<table *ngIf="showTable1">
     <thead>
       <tr>
-        <td>id</td>
-        <td>name</td>
-        <td>budget</td>
-        <td>category</td>
-        <td>date</td>
+        <td>Id</td>
+        <td>Name</td>
+        <td>Budget</td>
+        <td>Category</td>
+        <td>Date</td>
         <td>Actions</td>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let element of table">
+      <tr *ngFor="let element of projectsArray">
         <td>{{ element.id }}</td>
         <td>{{ element.name }}</td>
         <td>{{ element.budget }}</td>
         <td>{{ element.category }}</td>
-        <td>{{ element.date }}</td>
-        <td><button (click)="DownloadPDF(element.id)">Report</button></td>
+        <td>{{ element.date.substring(0,10) }}</td>
+        <td><button>File a report</button></td>
       </tr>
     </tbody>
   </table>
-  
+
+<br>
+<br>
+<br>
+
+<button (click)="togglePopup('table2')" class="long-button">Show Products</button>
+  <table *ngIf="showTable2">
+    <thead>
+      <tr>
+        <td>Id</td>
+        <td>Name</td>
+        <td>Lastname</td>
+        <td>Title</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let element of workersArray">
+        <td>{{ element.id }}</td>
+        <td>{{ element.name }}</td>
+        <td>{{ element.lastName }}</td>
+        <td>{{ element.title }}</td>
+        <td><button>File a report</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <app-repbox></app-repbox>

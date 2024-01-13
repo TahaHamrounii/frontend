@@ -1,0 +1,9 @@
+<div id="box" class="table-container">
+  <table *ngFor="let obj of keyObjectsArray " class="side-by-side-table">
+    <tr>{{obj.concernedObject}}</tr>
+    <tr><td></td></tr>
+    <tr *ngFor="let key of keywordsArray">
+      <td *ngIf="key.concernedObject == obj.concernedObject">{{'{{'}} {{key.value}} {{'}}'}}</td>
+    </tr>
+  </table>
+</div>
