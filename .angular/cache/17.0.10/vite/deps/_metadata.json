@@ -1,50 +1,56 @@
 {
-  "hash": "f8c450ee",
-  "browserHash": "bd911d3b",
+  "hash": "6e895393",
+  "browserHash": "ec007e62",
   "optimized": {
     "@angular/common": {
       "src": "../../../../../node_modules/@angular/common/fesm2022/common.mjs",
       "file": "@angular_common.js",
-      "fileHash": "c7479368",
+      "fileHash": "68de520c",
       "needsInterop": false
     },
     "@angular/core": {
       "src": "../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "bea4814d",
+      "fileHash": "3d472230",
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
-      "fileHash": "025eee95",
+      "fileHash": "07e6fd98",
       "needsInterop": false
     },
     "@angular/router": {
       "src": "../../../../../node_modules/@angular/router/fesm2022/router.mjs",
       "file": "@angular_router.js",
-      "fileHash": "c84598ff",
+      "fileHash": "1327a314",
       "needsInterop": false
     },
     "@angular/forms": {
       "src": "../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
       "file": "@angular_forms.js",
-      "fileHash": "07f737d4",
+      "fileHash": "d64bdcd9",
       "needsInterop": false
     },
     "jspdf": {
       "src": "../../../../../node_modules/jspdf/dist/jspdf.es.min.js",
       "file": "jspdf.js",
-      "fileHash": "9d691e1e",
+      "fileHash": "91dfee52",
       "needsInterop": false
+    },
+    "handlebars": {
+      "src": "../../../../../node_modules/handlebars/dist/cjs/handlebars.js",
+      "file": "handlebars.js",
+      "fileHash": "d967d006",
+      "needsInterop": true
     }
   },
   "chunks": {
+    "purify.es-COZS3BKZ": {
+      "file": "purify__es-COZS3BKZ.js"
+    },
     "index.es-F32KSGI6": {
       "file": "index__es-F32KSGI6.js"
-    },
-    "chunk-UMXKHIZH": {
-      "file": "chunk-UMXKHIZH.js"
     },
     "chunk-3DOQAK2E": {
       "file": "chunk-3DOQAK2E.js"
@@ -52,14 +58,14 @@
     "chunk-SXRWQJ5U": {
       "file": "chunk-SXRWQJ5U.js"
     },
+    "chunk-UMXKHIZH": {
+      "file": "chunk-UMXKHIZH.js"
+    },
     "chunk-DDHDKRPV": {
       "file": "chunk-DDHDKRPV.js"
     },
     "html2canvas.esm-M7GPBYJX": {
       "file": "html2canvas__esm-M7GPBYJX.js"
-    },
-    "purify.es-COZS3BKZ": {
-      "file": "purify__es-COZS3BKZ.js"
     },
     "chunk-STUZPFMT": {
       "file": "chunk-STUZPFMT.js"

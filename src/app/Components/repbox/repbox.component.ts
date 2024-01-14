@@ -2,6 +2,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import Handlebars from 'handlebars';
+
 import jsPDF from 'jspdf';
 
 // Define interfaces for Project and Worker
@@ -94,10 +96,8 @@ export class RepboxComponent implements OnInit {
   changeText() {
     this.convertedReportText = this.reportText;
     if (parseInt(this.ImportedId) / 10000 >= 1) {
-      this.deleteProjectKeywords();
       this.replaceWorkerKeyWords();
     } else {
-      this.deleteWorkerKeywords();
       this.replaceProjectKeyWords();
     }
   }
@@ -106,43 +106,47 @@ export class RepboxComponent implements OnInit {
     console.error('Error fetching data:', error);
   }
 
-  savePdf() {
-    if (parseInt(this.ImportedId) / 10000 >= 1) {
-      this.getWorkerbyId();
-      console.log('case1');
-    } else {
-      console.log('case2');
-      this.getProjectbyId();
-    }
+
+  replaceKeywords(data: any, template: string): string {
+    const compiledTemplate = Handlebars.compile(template);
+    return compiledTemplate(data);
   }
 
   replaceWorkerKeyWords() {
-    this.convertedReportText = this.convertedReportText.replace(/{{\s*worker_id\s*}}/g, this.chosenWorker.id);
-    this.convertedReportText = this.convertedReportText.replace(/{{\s*worker_name\s*}}/g, this.chosenWorker.name);
-    this.convertedReportText = this.convertedReportText.replace(/{{\s*worker_last_name\s*}}/g, this.chosenWorker.lastName);
-    this.convertedReportText = this.convertedReportText.replace(/{{\s*worker_title\s*}}/g, this.chosenWorker.title);
+
+    var data = {
+      worker_id : this.chosenWorker.id,
+      worker_name: this.chosenWorker.name,
+      worker_last_name: this.chosenWorker.lastName,
+      worker_title: this.chosenWorker.title,
+  };
+    this.convertedReportText = this.replaceKeywords(data, this.reportText);
   }
 
   replaceProjectKeyWords() {
-    this.convertedReportText = this.convertedReportText.replace(/{{\s*project_id\s*}}/g, this.chosenProject.id);
-    this.convertedReportText = this.convertedReportText.replace(/{{\s*project_name\s*}}/g, this.chosenProject.name);
-    this.convertedReportText = this.convertedReportText.replace(/{{\s*project_budget\s*}}/g, this.chosenProject.budget);
-    this.convertedReportText = this.convertedReportText.replace(/{{\s*project_category\s*}}/g, this.chosenProject.category);
-    this.convertedReportText = this.convertedReportText.replace(/{{\s*project_date\s*}}/g, this.chosenProject.date);
-  }
+    var data = {
+      project_id : this.chosenProject.id,
+      project_name: this.chosenProject.name,
+      project_budget: this.chosenProject.budget,
+      project_category: this.chosenProject.category,
+      project_date: this.chosenProject.date.substring(0,10),
 
-  deleteWorkerKeywords() {
-    this.convertedReportText = this.convertedReportText.replace(/{{\s*worker_id\s*}}/g, '');
-    this.convertedReportText = this.convertedReportText.replace(/{{\s*worker_name\s*}}/g, '');
-    this.convertedReportText = this.convertedReportText.replace(/{{\s*worker_last_name\s*}}/g, '');
-    this.convertedReportText = this.convertedReportText.replace(/{{\s*worker_title\s*}}/g, '');
-  }
+  };
+    this.convertedReportText = this.replaceKeywords(data, this.reportText);
 
-  deleteProjectKeywords() {
-    this.convertedReportText = this.convertedReportText.replace(/{{\s*project_id\s*}}/g, '');
-    this.convertedReportText = this.convertedReportText.replace(/{{\s*project_name\s*}}/g, '');
-    this.convertedReportText = this.convertedReportText.replace(/{{\s*project_budget\s*}}/g, '');
-    this.convertedReportText = this.convertedReportText.replace(/{{\s*project_category\s*}}/g, '');
-    this.convertedReportText = this.convertedReportText.replace(/{{\s*project_date\s*}}/g, '');
   }
+  
+  savePdf() {
+    if (parseInt(this.ImportedId) / 10000 >= 1) {
+      this.getWorkerbyId();
+    } else {
+      this.getProjectbyId();
+    }
+  }
+  quit()
+  {
+    this.convertedReportText=''
+    this.reportText=''
+  }
+  
 }
