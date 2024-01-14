@@ -1,9 +1,13 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+
+import jsPDF from 'jspdf';
+
 @Component({
   selector: 'app-repbox',
   standalone: true,
-  imports: [CommonModule,],
+  imports: [CommonModule,FormsModule],
   templateUrl: './repbox.component.html',
   styleUrl: './repbox.component.css'
 })
@@ -11,6 +15,7 @@ export class RepboxComponent {
 
   keywordsArray : any[] = []
   keyObjectsArray : any[] = []
+  reportText: string = ''
 
   ngOnInit() {
     this.getKeywords()
@@ -47,6 +52,14 @@ export class RepboxComponent {
       console.error('Error fetching data:', error);
     });
   }
-
-
+  DownloadPDF() {
+        const maxWidth = 180;
+        const pdf = new jsPDF("p", "mm", "a4");
+        console.log(this.reportText);
+        const lineBrokeText = pdf.splitTextToSize(this.reportText, maxWidth);
+        pdf.text(lineBrokeText, 10, 10);
+        pdf.save('Generate_project_report');
+      }
 }
+
+

@@ -1,9 +1,16 @@
-<div id="box" class="table-container">
+<div id="box">
+<div class="table-container">
   <table *ngFor="let obj of keyObjectsArray " class="side-by-side-table">
     <tr>{{obj.concernedObject}}</tr>
-    <tr><td></td></tr>
+    <br>
     <tr *ngFor="let key of keywordsArray">
       <td *ngIf="key.concernedObject == obj.concernedObject">{{'{{'}} {{key.value}} {{'}}'}}</td>
     </tr>
   </table>
+</div>
+<div id="textAreaContainer">
+  <textarea [(ngModel)]="reportText">
+  </textarea>
+  <button (click)="DownloadPDF()"> Download PDF</button>
+</div>
 </div>

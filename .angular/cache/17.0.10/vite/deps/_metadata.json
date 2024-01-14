@@ -1,41 +1,68 @@
 {
-  "hash": "ee00cf5e",
-  "browserHash": "6c3059d9",
+  "hash": "f8c450ee",
+  "browserHash": "bd911d3b",
   "optimized": {
     "@angular/common": {
       "src": "../../../../../node_modules/@angular/common/fesm2022/common.mjs",
       "file": "@angular_common.js",
-      "fileHash": "e2c44c48",
+      "fileHash": "c7479368",
       "needsInterop": false
     },
     "@angular/core": {
       "src": "../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "36b29834",
+      "fileHash": "bea4814d",
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
-      "fileHash": "5cfcc835",
+      "fileHash": "025eee95",
       "needsInterop": false
     },
     "@angular/router": {
       "src": "../../../../../node_modules/@angular/router/fesm2022/router.mjs",
       "file": "@angular_router.js",
-      "fileHash": "65ed00aa",
+      "fileHash": "c84598ff",
+      "needsInterop": false
+    },
+    "@angular/forms": {
+      "src": "../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
+      "file": "@angular_forms.js",
+      "fileHash": "07f737d4",
+      "needsInterop": false
+    },
+    "jspdf": {
+      "src": "../../../../../node_modules/jspdf/dist/jspdf.es.min.js",
+      "file": "jspdf.js",
+      "fileHash": "9d691e1e",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-EJZUQ4WJ": {
-      "file": "chunk-EJZUQ4WJ.js"
+    "index.es-F32KSGI6": {
+      "file": "index__es-F32KSGI6.js"
     },
-    "chunk-2LUOTJJP": {
-      "file": "chunk-2LUOTJJP.js"
+    "chunk-UMXKHIZH": {
+      "file": "chunk-UMXKHIZH.js"
     },
-    "chunk-KOXGXC6M": {
-      "file": "chunk-KOXGXC6M.js"
+    "chunk-3DOQAK2E": {
+      "file": "chunk-3DOQAK2E.js"
+    },
+    "chunk-SXRWQJ5U": {
+      "file": "chunk-SXRWQJ5U.js"
+    },
+    "chunk-DDHDKRPV": {
+      "file": "chunk-DDHDKRPV.js"
+    },
+    "html2canvas.esm-M7GPBYJX": {
+      "file": "html2canvas__esm-M7GPBYJX.js"
+    },
+    "purify.es-COZS3BKZ": {
+      "file": "purify__es-COZS3BKZ.js"
+    },
+    "chunk-STUZPFMT": {
+      "file": "chunk-STUZPFMT.js"
     }
   }
 }
