@@ -1,4 +1,4 @@
-import { Component,ViewChild} from '@angular/core';
+import { Component} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RepboxComponent } from '../repbox/repbox.component';
 
@@ -19,11 +19,8 @@ export class Comp1Component {
   showTable1: boolean = false;
   showTable2: boolean = false;
   showRepbox: boolean = false;
-
-  repbox!: RepboxComponent;
-
+  elementId: string = '';
   ngOnInit() {
-    this.repbox = new RepboxComponent();
     this.getProjects()
     this.getWorkers()
   }
@@ -31,8 +28,9 @@ export class Comp1Component {
 
 
   toggleRepbox(id : string) {
+    this.elementId = id;
+    console.log(this.elementId)
     this.showRepbox = true;
-    this.repbox.setId(id);
   }
   togglePopup(ch : string): void {
     if(ch== 'table1')this.showTable1 = !this.showTable1

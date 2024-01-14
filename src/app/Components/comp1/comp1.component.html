@@ -47,5 +47,6 @@
       </tr>
     </tbody>
   </table>
-
-  <app-repbox *ngIf="showRepbox" class="show"></app-repbox>
+  <div *ngIf="showRepbox">
+    <app-repbox [ImportedId]="elementId" class="show"></app-repbox>
+  </div>
