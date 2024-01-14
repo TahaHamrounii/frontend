@@ -16,6 +16,7 @@ export class RepboxComponent {
   keywordsArray : any[] = []
   keyObjectsArray : any[] = []
   reportText: string = ''
+  elementId: string = '';
 
   ngOnInit() {
     this.getKeywords()
@@ -53,13 +54,18 @@ export class RepboxComponent {
     });
   }
   DownloadPDF() {
-        const maxWidth = 180;
-        const pdf = new jsPDF("p", "mm", "a4");
-        console.log(this.reportText);
-        const lineBrokeText = pdf.splitTextToSize(this.reportText, maxWidth);
-        pdf.text(lineBrokeText, 10, 10);
-        pdf.save('Generate_project_report');
-      }
+    const maxWidth = 180;
+    const pdf = new jsPDF("p", "mm", "a4");
+    console.log(this.reportText);
+    const lineBrokeText = pdf.splitTextToSize(this.reportText, maxWidth);
+    pdf.text(lineBrokeText, 10, 10);
+    pdf.save('Generate_project_report');
+  }
+
+  setId(id: string) {
+    this.elementId = id;
+    console.log(this.elementId);
+  }
 }
 
 

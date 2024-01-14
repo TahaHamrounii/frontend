@@ -18,7 +18,7 @@
         <td>{{ element.budget }}</td>
         <td>{{ element.category }}</td>
         <td>{{ element.date.substring(0,10) }}</td>
-        <td><button (click)="toggleRepbox()" >File a report</button></td>
+        <td><button (click)="toggleRepbox(element.id)" >File a report</button></td>
       </tr>
     </tbody>
   </table>
@@ -43,7 +43,7 @@
         <td>{{ element.name }}</td>
         <td>{{ element.lastName }}</td>
         <td>{{ element.title }}</td>
-        <td><button (click)="toggleRepbox()">File a report</button></td>
+        <td><button (click)="toggleRepbox(element.id)">File a report</button></td>
       </tr>
     </tbody>
   </table>
