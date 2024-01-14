@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RepboxComponent } from '../repbox/repbox.component';
 
@@ -29,8 +29,10 @@ export class Comp1Component {
 
   toggleRepbox(id : string) {
     this.elementId = id;
-    console.log(this.elementId)
     this.showRepbox = true;
+  }
+  handleCloseButtonEvent(value: boolean) {
+    this.showRepbox = value;
   }
   togglePopup(ch : string): void {
     if(ch== 'table1')this.showTable1 = !this.showTable1

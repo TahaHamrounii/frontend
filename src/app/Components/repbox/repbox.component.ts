@@ -1,5 +1,5 @@
 // Import necessary modules and libraries
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import Handlebars from 'handlebars';
@@ -39,10 +39,14 @@ export class RepboxComponent implements OnInit {
   chosenProject: Project = {} as Project;
   chosenWorker: Worker = {} as Worker;
 
+  @Output() CloseButton: EventEmitter<boolean> = new EventEmitter();
+  emitEvent() {
+    this.CloseButton.emit(false);
+  }
+
   ngOnInit() {
     this.getKeywords();
     this.getObjectsNumber();
-    console.log(this.ImportedId);
   }
 
   getKeywords() {
@@ -147,6 +151,7 @@ export class RepboxComponent implements OnInit {
   {
     this.convertedReportText=''
     this.reportText=''
+    this.emitEvent();
   }
   
 }
