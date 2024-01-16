@@ -1,48 +1,48 @@
 {
-  "hash": "6e895393",
-  "browserHash": "ec007e62",
+  "hash": "ae7dc0ad",
+  "browserHash": "ed6dcc13",
   "optimized": {
     "@angular/common": {
       "src": "../../../../../node_modules/@angular/common/fesm2022/common.mjs",
       "file": "@angular_common.js",
-      "fileHash": "68de520c",
+      "fileHash": "594ece13",
       "needsInterop": false
     },
     "@angular/core": {
       "src": "../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "3d472230",
-      "needsInterop": false
-    },
-    "@angular/platform-browser": {
-      "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
-      "file": "@angular_platform-browser.js",
-      "fileHash": "07e6fd98",
-      "needsInterop": false
-    },
-    "@angular/router": {
-      "src": "../../../../../node_modules/@angular/router/fesm2022/router.mjs",
-      "file": "@angular_router.js",
-      "fileHash": "1327a314",
+      "fileHash": "cf223fb5",
       "needsInterop": false
     },
     "@angular/forms": {
       "src": "../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
       "file": "@angular_forms.js",
-      "fileHash": "d64bdcd9",
+      "fileHash": "3d84ca34",
       "needsInterop": false
     },
-    "jspdf": {
-      "src": "../../../../../node_modules/jspdf/dist/jspdf.es.min.js",
-      "file": "jspdf.js",
-      "fileHash": "91dfee52",
+    "@angular/platform-browser": {
+      "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
+      "file": "@angular_platform-browser.js",
+      "fileHash": "530be740",
+      "needsInterop": false
+    },
+    "@angular/router": {
+      "src": "../../../../../node_modules/@angular/router/fesm2022/router.mjs",
+      "file": "@angular_router.js",
+      "fileHash": "9692213e",
       "needsInterop": false
     },
     "handlebars": {
       "src": "../../../../../node_modules/handlebars/dist/cjs/handlebars.js",
       "file": "handlebars.js",
-      "fileHash": "d967d006",
+      "fileHash": "17875dee",
       "needsInterop": true
+    },
+    "jspdf": {
+      "src": "../../../../../node_modules/jspdf/dist/jspdf.es.min.js",
+      "file": "jspdf.js",
+      "fileHash": "08089040",
+      "needsInterop": false
     }
   },
   "chunks": {
