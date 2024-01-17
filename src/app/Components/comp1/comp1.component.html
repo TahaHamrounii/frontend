@@ -48,7 +48,10 @@
     </tbody>
   </table>
   <div *ngIf="showRepbox">
-    <app-repbox [ImportedId]="elementId" class="show" (CloseButton)="handleCloseButtonEvent($event)"></app-repbox>
+    <!-- <app-repbox [ImportedId]="elementId" class="show" (CloseButton)="handleCloseButtonEvent($event)"></app-repbox> -->
+    <app-repbox class="show" [ImportedId]="elementId" (CloseButton)="handleCloseButtonEvent($event)"></app-repbox>
+
+
   </div>
 
 

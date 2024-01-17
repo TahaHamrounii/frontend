@@ -1,4 +1,20 @@
+
+
 <div>
+
+    <div>
+        <button (click)="toggleAddModel()">Add Model</button>
+        <div *ngIf="showInputs">
+            <input type="text" [(ngModel)]="inputModelId" placeholder="Model id" required>
+            <input type="text" [(ngModel)]="inputModelText" placeholder="Model Text" required>
+            <input type="text" [(ngModel)]="inputModelDiffusion" placeholder="Model Diffusion" required>
+            <button (click)="saveModel()">Save</button>
+            <button (click)="toggleAddModel()">Cancel</button>
+        </div>
+    </div>
+
+
+
 
 <div *ngFor="let element of modelsArray">
  {{element.id}} <button (click)="showDescription(element.id)">view</button>

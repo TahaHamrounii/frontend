@@ -1,8 +1,9 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 <div class="container">
     model id: {{ chosenModel.id }}
     <br>
     <div *ngIf="!editingMode">
-        model text content: {{ chosenModel.text }} <button (click)="startEditing()">edit text</button>
+        model text content: {{ chosenModel.text }} <button (click)="startEditing()" class="fa-solid fa-pen-to-square"></button>
     </div>
     <div *ngIf="editingMode">
         <textarea [(ngModel)]="chosenModel.text"></textarea>
@@ -10,3 +11,4 @@
         <button (click)="cancelEditing()">cancel</button>
     </div>
 </div>
+

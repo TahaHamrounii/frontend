@@ -18,7 +18,6 @@ export class ModelsDescriptionComponent implements OnInit {
     this.getModelbyId()
   }
   getModelbyId() {
-    console.log(`http://127.0.0.1:8000/models/${this.desId}`)
     fetch(`http://127.0.0.1:8000/models/${this.desId}`)
       .then(response => response.json())
       .then(data => {

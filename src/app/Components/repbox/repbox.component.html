@@ -1,18 +1,16 @@
+
+
 <div id="box">
   <button (click)="quit()">X</button>
-<div class="table-container">
-  <table *ngFor="let obj of keyObjectsArray " class="side-by-side-table">
-    <tr>{{obj.concernedObject}}</tr>
-    <br>
-    <tr *ngFor="let key of keywordsArray">
-      <td *ngIf="key.concernedObject == obj.concernedObject">{{'{{'}} {{key.value}} {{'}}'}}</td>
-    </tr>
-  </table>
+
+<br>
+<div *ngIf="((+ImportedId) / 10000 < 1)">
+<button (click)="downloadPdf('Project_presentation',ImportedId)">Download presentation</button>
 </div>
-<div id="textAreaContainer">
-  <textarea [(ngModel)]="reportText"> </textarea>
-  <button (click)="savePdf()" > Download PDF</button>
+<div *ngIf="((+ImportedId) / 10000 >= 1)">
+<button (click)="downloadPdf('Certificate_of_attendance',ImportedId)">Download Certificate of attendance</button>
+<br>
+<button (click)="downloadPdf('Worker_presentation',ImportedId)">Download presentation</button>
 </div>
-<div>
-</div>
-</div>
+
+ 
