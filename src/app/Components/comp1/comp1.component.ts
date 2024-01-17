@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RepboxComponent } from '../repbox/repbox.component';
+import { ModelsComponent } from '../models/models.component';
 
 
 
 @Component({
   selector: 'app-comp1',
   standalone: true,
-  imports: [CommonModule,RepboxComponent],
+  imports: [CommonModule,RepboxComponent,ModelsComponent],
   templateUrl: './comp1.component.html',
   styleUrl: './comp1.component.css'
 })

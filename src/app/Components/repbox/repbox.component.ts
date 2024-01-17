@@ -5,8 +5,6 @@ import { FormsModule } from '@angular/forms';
 import Handlebars from 'handlebars';
 
 import jsPDF from 'jspdf';
-
-// Define interfaces for Project and Worker
 interface Project {
   id: string;
   name: string;

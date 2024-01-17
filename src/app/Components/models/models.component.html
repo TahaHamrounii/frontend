@@ -1,0 +1,12 @@
+<div>
+
+<div *ngFor="let element of modelsArray">
+ {{element.id}} <button (click)="showDescription(element.id)">view</button>
+</div>
+
+<div *ngIf="Description">
+    <app-models-description [desId]="modelId" class="show"></app-models-description>
+</div>
+
+
+</div>

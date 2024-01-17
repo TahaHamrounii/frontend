@@ -1,0 +1,12 @@
+<div class="container">
+    model id: {{ chosenModel.id }}
+    <br>
+    <div *ngIf="!editingMode">
+        model text content: {{ chosenModel.text }} <button (click)="startEditing()">edit text</button>
+    </div>
+    <div *ngIf="editingMode">
+        <textarea [(ngModel)]="chosenModel.text"></textarea>
+        <button (click)="saveChanges()">save</button>
+        <button (click)="cancelEditing()">cancel</button>
+    </div>
+</div>
